@@ -1,0 +1,146 @@
+/* General styling */
+:root {
+  --primary-color: #1a237e; /* Dark Blue */
+  --secondary-color: #3949ab; /* Indigo */
+  --background-color: #f4f7f6;
+  --text-color: #333;
+  --card-background: #fff;
+  --loading-gradient: linear-gradient(
+    90deg,
+    #e0e0e0 25%,
+    #f0f0f0 50%,
+    #e0e0e0 75%
+  );
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  line-height: 1.6;
+}
+
+#app {
+  padding: 2em;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  margin-bottom: 3em;
+}
+
+h1 {
+  font-size: clamp(2em, 5vw, 2.8em);
+  color: var(--primary-color);
+  margin: 0 0 0.25em;
+  font-weight: 700;
+}
+
+#tagline {
+  font-size: clamp(1em, 2vw, 1.2em);
+  color: #555;
+  font-weight: 300;
+  min-height: 1.5em; /* Avoid layout shift */
+}
+
+/* Services Section */
+main h2 {
+  font-size: clamp(1.8em, 4vw, 2.2em);
+  color: var(--primary-color);
+  margin-bottom: 1.5em;
+  font-weight: 700;
+}
+
+#services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2em;
+}
+
+.service-card {
+  background-color: var(--card-background);
+  border-radius: 12px;
+  padding: 2em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.service-card .icon {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: var(--secondary-color);
+  line-height: 1;
+}
+
+.service-card .icon svg {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.service-card h3 {
+  font-size: 1.3em;
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  color: var(--primary-color);
+}
+
+.service-card p.description {
+  color: #555;
+  font-weight: 300;
+  flex-grow: 1;
+  min-height: 6em; /* Reserve space to prevent layout shifts */
+}
+
+/* Loading state animation */
+.loading-placeholder {
+  color: transparent;
+  background: var(--loading-gradient);
+  background-size: 200% 100%;
+  animation: loading-shimmer 1.5s infinite linear;
+  border-radius: 6px;
+  user-select: none;
+}
+
+#tagline.loading-placeholder {
+  width: 60%;
+  max-width: 400px;
+  height: 1.2em;
+  margin: 0.2em auto;
+  display: inline-block;
+}
+
+.description.loading-placeholder {
+  height: 6em; /* Matches min-height */
+  width: 100%;
+}
+
+@keyframes loading-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #app {
+    padding: 1em;
+  }
+  #services-container {
+    gap: 1.5em;
+  }
+}
