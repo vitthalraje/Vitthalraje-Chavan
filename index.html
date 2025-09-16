@@ -22,16 +22,144 @@
   </head>
   <body>
     <div id="app">
-      <header>
-        <h1>VRC INFRAMAX PRIVATE LIMITED</h1>
-        <p id="tagline" class="loading-placeholder" aria-live="polite"></p>
+      <header id="home">
+        <div class="header-content">
+          <h1>VRC INFRAMAX PRIVATE LIMITED</h1>
+          <p id="tagline" class="loading-placeholder" aria-live="polite"></p>
+        </div>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#sustainability">Sustainability & Safety</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </header>
       <main>
-        <h2>Our Services</h2>
-        <div id="services-container" aria-live="polite">
-          <!-- Service cards will be dynamically injected here -->
-        </div>
+        <section id="about">
+          <h2>About VRC INFRAMAX</h2>
+          <div class="about-content">
+            <div>
+              <h3>Our Mission & Vision</h3>
+              <p>
+                To be a leader in the infrastructure sector, shaping a better
+                future through quality, innovation, and sustainability. Our
+                vision is to build the foundations of tomorrow, creating
+                lasting value for our clients and communities.
+              </p>
+            </div>
+            <div>
+              <h3>Our Story</h3>
+              <p>
+                Founded on the principles of integrity and excellence, VRC
+                INFRAMAX has grown from a small firm into a respected name in
+                infrastructure development. Our journey is marked by a
+                relentless commitment to overcoming challenges and delivering
+                projects that stand the test of time.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="services">
+          <h2>Our Services</h2>
+          <div id="services-container" aria-live="polite">
+            <!-- Service cards will be dynamically injected here -->
+          </div>
+        </section>
+
+        <section id="projects">
+          <h2>Our Portfolio</h2>
+          <div class="projects-grid">
+            <div class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1541855492-487910923774?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Highway Project"
+              />
+              <div class="project-info">
+                <h3>National Highway Expansion</h3>
+                <p>
+                  A 150km highway expansion project, completed ahead of
+                  schedule, improving connectivity for millions.
+                </p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1524103632-22591a2E528a?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Bridge Construction"
+              />
+              <div class="project-info">
+                <h3>Riverfront Cable-Stayed Bridge</h3>
+                <p>
+                  An iconic bridge construction, combining modern engineering
+                  with aesthetic design to create a new city landmark.
+                </p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1588239002035-a43c4a25a4c5?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Industrial Complex"
+              />
+              <div class="project-info">
+                <h3>Mega Industrial Complex</h3>
+                <p>
+                  Development of a state-of-the-art industrial park, fostering
+                  economic growth and job creation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="sustainability">
+          <h2>Sustainability & Safety</h2>
+          <div class="sustainability-content">
+            <div>
+              <h3>Commitment to Sustainability</h3>
+              <p>
+                We are dedicated to environmentally friendly practices,
+                utilizing sustainable materials and advanced waste management
+                policies to minimize our ecological footprint and contribute to
+                greener infrastructure for future generations.
+              </p>
+            </div>
+            <div>
+              <h3>Commitment to Safety</h3>
+              <p>
+                Safety is paramount in all our operations. We adhere to the
+                strictest safety protocols and provide continuous training to
+                our teams, ensuring a safe environment for our employees, the
+                public, and our projects.
+              </p>
+            </div>
+          </div>
+        </section>
       </main>
+      <footer id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+            <p class="error-message" aria-live="polite"></p>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+            <p class="error-message" aria-live="polite"></p>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <p class="error-message" aria-live="polite"></p>
+          </div>
+          <button type="submit">Send Message</button>
+          <p id="form-status" aria-live="polite"></p>
+        </form>
+      </footer>
     </div>
   </body>
 </html>

@@ -8,29 +8,123 @@ import { GoogleGenAI, Type } from '@google/genai';
 
 const services = [
   {
-    title: 'Real Estate Development',
+    title: 'Roads & Highways',
     prompt:
-      'Engage in real estate business, including purchase, lease, development, and construction of all types of properties.',
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg>`,
+      'Describe our expertise in designing, constructing, and maintaining roads and highways, emphasizing durability, safety, and modern engineering.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9,8.47H15.42V4.49a.53.53,0,0,0-.53-.53H9.11a.53.53,0,0,0-.53.53V8.47H5.1a.53.53,0,0,0-.53.53v6.32a.53.53,0,0,0,.53.53H8.58v4h6.84v-4h3.48a.53.53,0,0,0,.53-.53V9a.53.53,0,0,0-.53-.53ZM9.64,5h4.72V8.47H9.64ZM14.36,19H9.64V15.76h4.72Zm4-4.24H5.63V9.53H18.37Z"/></svg>`,
   },
   {
-    title: 'Sustainable Infrastructure',
+    title: 'Bridges & Flyovers',
     prompt:
-      'Act as town planners and infrastructure developers with a focus on sustainability.',
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c-5.3 0-9.8 3.9-10.8 9h2.1c.9-4.2 4.5-7.5 8.7-7.5s7.8 3.3 8.7 7.5h2.1c-1-5.1-5.5-9-10.8-9zM12 22c5.3 0 9.8-3.9 10.8-9h-2.1c-.9 4.2-4.5 7.5-8.7 7.5s-7.8-3.3-8.7-7.5H1.2C2.2 18.1 6.7 22 12 22zm-4-9c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4z"/></svg>`,
+      'Detail our capabilities in constructing bridges and flyovers, focusing on innovative design, structural integrity, and connecting communities.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M21,11H17.92L14,5.15V3a1,1,0,0,0-1-1H11a1,1,0,0,0-1,1V5.15L6.08,11H3a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1H4v4a1,1,0,0,0,1,1H7a1,1,0,0,0,1-1V15h8v4a1,1,0,0,0,1,1h2a1,1,0,0,0,1-1V15h1a1,1,0,0,0,1-1V12A1,1,0,0,0,21,11ZM5,13H3V12H5Zm6-8h2V3H11ZM8,13H6V12H8Zm4,0H10V12h2Zm4,0H14V12h2Zm3,6H17V15h2Zm-5,0H12V15h2Zm-4,0H8V15h2Zm-4,0H5V15H7Zm14-5H19V12h2Z"/></svg>`,
   },
   {
-    title: 'Renovation & Redevelopment',
-    prompt: 'Undertake renovation and redevelopment of existing structures.',
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>`,
+    title: 'Buildings & Industrial Structures',
+    prompt:
+      'Showcase our work in building commercial, residential, and industrial complexes, highlighting quality, functionality, and architectural excellence.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19,21H5a1,1,0,0,1-1-1V6A1,1,0,0,1,5,5H19a1,1,0,0,1,1,1V20A1,1,0,0,1,19,21ZM6,19H18V7H6Zm11-6H13V9a1,1,0,0,0-2,0v4H7a1,1,0,0,0,0,2h4v4a1,1,0,0,0,2,0V15h4a1,1,0,0,0,0-2Z"/></svg>`,
   },
   {
-    title: 'AI-Driven Solutions',
+    title: 'Water & Wastewater Management',
     prompt:
-      'Provide AI-driven construction, design, and professional services.',
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 18H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8-4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8-4H7V8h2v2zm4 0h-2V8h2v2zm4 0h-2V8h2v2zm-8-4H7V4h2v2zm4 0h-2V4h2v2zm4 0h-2V4h2v2z"/></svg>`,
+      'Explain our role in developing water and wastewater infrastructure, including treatment plants and pipeline networks, focusing on efficiency and environmental responsibility.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12,2a10,10,0,0,0-8,3.74,1,1,0,0,0,1.42,1.42,8,8,0,0,1,13.14,0,1,1,0,0,0,1.42-1.42A10,10,0,0,0,12,2Zm0,17.5A4.5,4.5,0,0,1,7.5,15,4.5,4.5,0,0,1,12,10.5,4.5,4.5,0,0,1,16.5,15,4.5,4.5,0,0,1,12,19.5ZM12,6A10,10,0,0,0,2,9.32V20a1,1,0,0,0,1,1H21a1,1,0,0,0,1-1V9.32A10,10,0,0,0,12,6Zm8,13H4V9.41c.21-.12.42-.25.63-.38A8,8,0,0,1,12,8a8,8,0,0,1,7.37,3c.21.13.42.26.63.38Z"/></svg>`,
+  },
+  {
+    title: 'Energy Infrastructure',
+    prompt:
+      'Describe our projects in the energy sector, such as power transmission lines and substations, emphasizing reliability and support for renewable energy.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.29,1,7.07,10.26a1,1,0,0,0,.76,1.63H12v8.18a1,1,0,0,0,1.76.65L21,11.74a1,1,0,0,0-.76-1.63H15V2.82A1,1,0,0,0,14.29,1Z"/></svg>`,
   },
 ];
+
+function initializeContactForm() {
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  if (!form) return;
+
+  const nameInput = document.getElementById('name') as HTMLInputElement;
+  const emailInput = document.getElementById('email') as HTMLInputElement;
+  const messageInput = document.getElementById(
+    'message',
+  ) as HTMLTextAreaElement;
+  const formStatus = document.getElementById('form-status');
+  const submitButton = form.querySelector(
+    'button[type="submit"]',
+  ) as HTMLButtonElement;
+
+  const validateEmail = (email: string) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+  };
+
+  const showError = (input: HTMLElement, message: string) => {
+    const formGroup = input.parentElement;
+    const errorEl = formGroup?.querySelector('.error-message');
+    if (errorEl) {
+      errorEl.textContent = message;
+    }
+    input.classList.add('invalid');
+  };
+
+  const clearError = (input: HTMLElement) => {
+    const formGroup = input.parentElement;
+    const errorEl = formGroup?.querySelector('.error-message');
+    if (errorEl) {
+      errorEl.textContent = '';
+    }
+    input.classList.remove('invalid');
+  };
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let isValid = true;
+
+    // Clear previous errors
+    clearError(nameInput);
+    clearError(emailInput);
+    clearError(messageInput);
+    if (formStatus) formStatus.textContent = '';
+
+    // Validate Name
+    if (nameInput.value.trim() === '') {
+      showError(nameInput, 'Name is required.');
+      isValid = false;
+    }
+
+    // Validate Email
+    if (emailInput.value.trim() === '') {
+      showError(emailInput, 'Email is required.');
+      isValid = false;
+    } else if (!validateEmail(emailInput.value)) {
+      showError(emailInput, 'Please enter a valid email address.');
+      isValid = false;
+    }
+
+    // Validate Message
+    if (messageInput.value.trim() === '') {
+      showError(messageInput, 'Message is required.');
+      isValid = false;
+    }
+
+    if (isValid && formStatus) {
+      formStatus.textContent = 'Sending message...';
+      formStatus.style.color = 'var(--secondary-color)';
+      submitButton.disabled = true;
+
+      // Simulate network request
+      setTimeout(() => {
+        formStatus.textContent = 'Message sent successfully!';
+        formStatus.style.color = 'green';
+        form.reset();
+        submitButton.disabled = false;
+        clearError(nameInput);
+        clearError(emailInput);
+        clearError(messageInput);
+      }, 1000);
+    }
+  });
+}
 
 async function main() {
   const taglineEl = document.getElementById('tagline');
@@ -62,7 +156,7 @@ async function main() {
       .join('\n');
     const prompt = `
       You are a marketing expert for a company called "VRC INFRAMAX PRIVATE LIMITED".
-      Based on the following services, generate a catchy, professional tagline for the company and a short, engaging description (around 30-40 words) for each service.
+      Based on the following services, generate a catchy, professional tagline for the company (around 8-12 words) and a short, engaging description (around 25-35 words) for each service.
 
       Services:
       ${servicePrompts}
@@ -114,28 +208,33 @@ async function main() {
     taglineEl.textContent = data.tagline;
     taglineEl.classList.remove('loading-placeholder');
 
-    data.serviceDescriptions.forEach((item: { title: string; description: string }) => {
-      const card = servicesContainer.querySelector(
-        `.service-card[data-title="${item.title}"]`,
-      );
-      if (card) {
-        const p = card.querySelector('.description');
-        if (p) {
-          p.textContent = item.description;
-          p.classList.remove('loading-placeholder');
+    data.serviceDescriptions.forEach(
+      (item: { title: string; description: string }) => {
+        const card = servicesContainer.querySelector(
+          `.service-card[data-title="${item.title}"]`,
+        );
+        if (card) {
+          const p = card.querySelector('.description');
+          if (p) {
+            p.textContent = item.description;
+            p.classList.remove('loading-placeholder');
+          }
         }
-      }
-    });
+      },
+    );
   } catch (error) {
     console.error('Error generating content:', error);
-    taglineEl.textContent = 'Error loading content. Please try again later.';
+    taglineEl.textContent = 'Building the Foundations of Tomorrow.';
     taglineEl.classList.remove('loading-placeholder');
-    const descriptionElements = servicesContainer.querySelectorAll('.description');
+    const descriptionElements =
+      servicesContainer.querySelectorAll('.description');
     descriptionElements.forEach((el) => {
       el.textContent = 'Could not load description.';
       el.classList.remove('loading-placeholder');
     });
   }
+
+  initializeContactForm();
 }
 
 main();
